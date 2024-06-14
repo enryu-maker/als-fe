@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+import FloatingBtn from './Components/Floatingbtn'
+import { Route, Router, Routes } from 'react-router-dom'
+import Home from './Screens/Home'
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+      <div className=' flex items-center justify-end z-50 p-10 fixed bottom-0 right-0'>
+        <FloatingBtn />
+      </div>
+      <Footer />
 
-export default App;
+    </div>
+  )
+}
