@@ -100,14 +100,14 @@ export default function Header() {
                   // onHoverEnd={()=>{
                   //   setShow(false)
                   // }}
-                  key={index} className=' font-medium hidden sm:flex hover:text-primary hover:font-bold text-base tracking-wide text-black'>{item?.name}</motion.button>
+                  key={index} className='  hidden sm:flex hover:text-primary font-bold text-base tracking-wide text-black'>{item?.name}</motion.button>
               ))
             }
           </div>
           <img alt={logo[1]?.name} src={logo[1]?.logo_image} className='h-[40px]' />
           <div className='flex space-x-4 items-center justify-center'>
-            <a href='#/contact-us' className='font-medium hidden sm:flex hover:text-primary hover:font-bold text-base tracking-wide text-black'>
-              Contact us
+            <a href='#/contact-us' className=' hidden sm:flex hover:text-primary font-bold text-base tracking-wide text-black'>
+              Saved Property
             </a>
             <motion.button
               whileTap={{ scale: 1.1 }}
