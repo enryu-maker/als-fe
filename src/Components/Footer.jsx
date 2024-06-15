@@ -1,25 +1,13 @@
 import React from 'react'
 import { IMAGE } from '../Assets/Image'
+import { useSelector } from 'react-redux'
 
 export default function Footer() {
-  const cat = [
-    {
-      id: 1,
-      name: "Buy"
-    },
-    {
-      id: 1,
-      name: "Sell"
-    },
-    {
-      id: 1,
-      name: "Rental"
-    },
-    {
-      id: 1,
-      name: "Lease"
-    },
-  ]
+  const cat = useSelector(state => state.Reducers.cat)
+  const logo = useSelector(state => state.Reducers.icon)
+  const contact = useSelector(state => state.Reducers.contact)
+
+
 
   const type = [
     {
@@ -58,16 +46,7 @@ export default function Footer() {
     },
   ]
 
-  const contact = [
-    {
-      id: 1,
-      name: "+919930999998"
-    },
-    {
-      id: 1,
-      name: "contact@als.com"
-    },
-  ]
+
   return (
     <div className='w-full h-[80vh]  font-Montserrat justify-evenly  items-center flex flex-col bg-gray-100'>
       <div className='w-[88%] sm:w-[78%]  h-[88%] flex justify-evenly items-center flex-col'>
@@ -97,19 +76,16 @@ export default function Footer() {
               ))
             }
           </div>
-          <div className='w-[45%] sm:w-auto'>
+          <div className='w-[45%] sm:w-auto flex flex-col'>
             <p className=' font-Montserrat text-lg sm:text-xl tracking-widest'>Contact Us </p>
-            {
-              contact?.map((item, index) => (
-                <p key={index} className=' font-medium text-sm sm:text-base tracking-wide text-gray-500'>{item?.name}</p>
-              ))
-            }
+            <a href={`tel:${contact[0]?.mobile_number}`} className=' font-medium text-sm sm:text-base tracking-wide text-gray-500'>{contact[0]?.mobile_number}</a>
+            <a href={`mailto:${contact[0]?.email}`} className=' font-medium text-sm sm:text-base tracking-wide text-gray-500'>{contact[0]?.email}</a>
           </div>
         </div>
         <div className='flex justify-evenly items-center sm:w-[48%] w-[88%]'>
-          <img alt='logo' src={IMAGE.als} className='sm:h-[65px] h-[45px]' />
+          <img alt={logo[0]?.name} src={logo[0]?.logo_image} className='sm:h-[65px] h-[45px]' />
           <p className=' font-Montserrat text-lg sm:text-xl tracking-widest'>by</p>
-          <img alt='logo' src={IMAGE.rm} className='sm:h-[65px] h-[45px]' />
+          <img alt={logo[1]?.name} src={logo[1]?.logo_image} className='sm:h-[65px] h-[45px]' />
         </div>
       </div>
 

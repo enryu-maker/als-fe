@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 import { FaWhatsapp } from "react-icons/fa6";
-import { useNavigate } from 'react-router-dom';
 
 export default function FloatingBtn() {
 //   const navigate = useNavigate()

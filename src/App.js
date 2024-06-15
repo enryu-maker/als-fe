@@ -2,9 +2,20 @@ import React from 'react'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import FloatingBtn from './Components/Floatingbtn'
-import { Route, Router, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from './Screens/Home'
+import { useDispatch } from 'react-redux'
+import { getCat, getContact, getLogo } from './Store/actions'
+
 export default function App() {
+  const dispatch = useDispatch()
+  React.useEffect(() => {
+    dispatch(getCat())
+    dispatch(getLogo())
+    dispatch(getContact())
+
+  }, [dispatch])
+  
   return (
     <div>
       <Header />

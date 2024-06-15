@@ -4,30 +4,19 @@ import { IoIosMenu } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
 import { RiFacebookCircleLine } from "react-icons/ri"
-import { IMAGE } from '../Assets/Image';
 import { MdCall } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { FiTwitter } from "react-icons/fi";
+import { useSelector } from 'react-redux';
+import { signInWithGooglePopup } from '../firebase.utils';
 export default function Header() {
   // const [show, setShow] = React.useState(false)
-  const cat = [
-    {
-      id: 1,
-      name: "Buy"
-    },
-    {
-      id: 1,
-      name: "Sell"
-    },
-    {
-      id: 1,
-      name: "Rental"
-    },
-    {
-      id: 1,
-      name: "Lease"
-    },
-  ]
+  const logo = useSelector(state => state.Reducers.icon)
+  const cat = useSelector(state => state.Reducers.cat)
+  const logGoogleUser = async () => {
+    const response = await signInWithGooglePopup();
+    console.log(response);
+  }
   return (
     <>
       <div className='h-[35px] font-Montserrat w-full bg-primary1 shadow-lg hidden sm:flex justify-center items-center '>
@@ -48,7 +37,7 @@ export default function Header() {
       <div className='h-[70px] font-Montserrat w-full bg-white shadow-lg flex justify-center items-center sticky top-0 '>
         <div className='w-[78%] h-full flex justify-between items-center '>
           <div className='space-x-4 flex items-center '>
-            <img alt='logo' src={IMAGE.als} className='h-[40px]' />
+            <img alt={logo[0]?.name} src={logo[0]?.logo_image} className='h-[40px]' />
             {
               cat?.map((item, index) => (
                 <motion.button whileHover={{ scale: 1.1 }} key={index} className=' font-medium hidden sm:flex hover:text-primary1 text-base tracking-wide text-black'>{item?.name}</motion.button>
@@ -58,7 +47,8 @@ export default function Header() {
           <div>
             <motion.button
               whileTap={{ scale: 1.1 }}
-              className='border-[1px] px-3 py-1 tracking-widest hidden hover:border-primary1 sm:flex rounded-md font-medium'>Login / Signup</motion.button>
+              onClick={logGoogleUser}
+              className='tracking-widest hidden  sm:flex rounded-md text-primary1 font-bold'>Login</motion.button>
           </div>
           <motion.button
             className='sm:hidden flex'
