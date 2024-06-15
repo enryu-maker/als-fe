@@ -3,6 +3,24 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { baseURL } from "../Helper/Helper";
 
+// /auth/login/
+// /auth/profile
+
+export const startLogin = (data) => {
+    return async dispatch => {
+        await axios.post(baseURL + 'auth/login/',data)
+            .then((resp) => {
+                dispatch({
+                    type: 'ACCESS',
+                    payload: resp.data
+                })
+            })
+            .catch((err) => {
+                toast.error(err.response);
+            })
+    }
+}
+
 export const getCat = () => {
     return async dispatch => {
         await axios.get(baseURL + 'property/category/')

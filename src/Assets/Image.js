@@ -1,5 +1,6 @@
 export const IMAGE = {
-    als : require('../Assets/logo  2.png'),
-    rm : require('../Assets/logo  1.png')
+    bath : require('../Assets/BathIcon.svg').default,
+    bed : require('../Assets/BedIcon.svg').default,
+    area : require('../Assets/SquareFeetIcon.svg').default
 
 }

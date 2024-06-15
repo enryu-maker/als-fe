@@ -83,9 +83,9 @@ export default function Footer() {
           </div>
         </div>
         <div className='flex justify-evenly items-center sm:w-[48%] w-[88%]'>
-          <img alt={logo[0]?.name} src={logo[0]?.logo_image} className='sm:h-[65px] h-[45px]' />
-          <p className=' font-Montserrat text-lg sm:text-xl tracking-widest'>by</p>
           <img alt={logo[1]?.name} src={logo[1]?.logo_image} className='sm:h-[65px] h-[45px]' />
+          <p className=' font-Montserrat text-lg sm:text-xl tracking-widest'>by</p>
+          <img alt={logo[0]?.name} src={logo[0]?.logo_image} className='sm:h-[65px] h-[45px]' />
         </div>
       </div>
 
