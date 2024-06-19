@@ -7,6 +7,8 @@ import Home from './Screens/Home'
 import { useDispatch } from 'react-redux'
 import { getCat, getContact, getLogo } from './Store/actions'
 import Info from './Screens/Info'
+import Property from './Screens/Property'
+import Saved from './Screens/Saved'
 
 export default function App() {
   const dispatch = useDispatch()
@@ -22,14 +24,13 @@ export default function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/saved-property' element={<Saved />} />
         <Route path='/home/:slug' element={<Info />} />
-
+        <Route path='/property/:slug' element={<Property />} />
       </Routes>
       <div className=' flex items-center justify-end z-50 p-10 fixed bottom-0 right-0'>
         <FloatingBtn />
       </div>
-      <Footer />
-
     </div>
   )
 }

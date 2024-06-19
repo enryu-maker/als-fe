@@ -106,7 +106,7 @@ export default function Header() {
           </div>
           <img alt={logo[1]?.name} src={logo[1]?.logo_image} className='h-[40px]' />
           <div className='flex space-x-4 items-center justify-center'>
-            <a href='#/contact-us' className=' hidden sm:flex hover:text-primary font-bold text-base tracking-wide text-black'>
+            <a href='#/saved-property' className=' hidden sm:flex hover:text-primary font-bold text-base tracking-wide text-black'>
               Saved Property
             </a>
             <motion.button

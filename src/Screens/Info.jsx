@@ -78,7 +78,7 @@ export default function Info() {
                             //   onClick={}
                             className='tracking-widest bg-primary flex justify-center items-center font-Montserrat text-white w-[44%] px-3 py-2 font-bold'>Request Info</motion.button>
                     </div>
-                    <p className=' text-[10px]  text-justify text-gray-400'>
+                    <p className=' text-[10px]  text-justify text-gray-400 font-Montserrat'>
                         By pressing Request Info, you agree that ALS and real estate professionals may contact you via phone/text about your inquiry,
                         which may involve the use of automated means. You are not required to consent as a condition of purchasing any property, goods or services. Message/data rates may apply.
                         You also agree to our Terms of Use ALS does not endorse any
