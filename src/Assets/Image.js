@@ -3,4 +3,5 @@ export const IMAGE = {
     bed : require('../Assets/BedIcon.svg').default,
     area : require('../Assets/SquareFeetIcon.svg').default,
     sample : require('../Assets/sample.jpg'),
+    stat1 : require('../Assets/stat1.png'),
 }
