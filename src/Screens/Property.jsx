@@ -2,6 +2,9 @@ import React from 'react'
 import Card from '../Components/Card'
 import Search from '../Components/Search'
 import Select from 'react-select';
+import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getCatProperty } from '../Store/actions';
 
 export default function Property() {
     const options = [
@@ -10,14 +13,19 @@ export default function Property() {
         { value: 'vanilla', label: 'Vanilla' },
     ];
     const [selectedOption, setSelectedOption] = React.useState(null);
-
+    const state = useLocation()
+    const [data,setData] = React.useState({})
+    const dispatch = useDispatch()
+    React.useEffect(()=>{
+        dispatch(getCatProperty(state.pathname.split('/')[4],setData))
+    },[dispatch])
     return (
         <div className='w-full h-full flex flex-col font-Montserrat justify-center items-center'>
             <Search />
             <div className='h-[82vh] w-full flex justify-evenly items-center'>
                 <div className='w-full mx-10 h-[88%] space-y-4'>
                     <div className='flex items-center justify-between'>
-                        <h1 className='text-xl font-Montserrat font-bold'>Atlanta, GA Real Estate & Homes For Sale</h1>
+                        <h1 className='text-xl font-Montserrat font-bold'>{data?.name}</h1>
                         <Select
                             className=' border-none'
                             placeholder="Sort By"
@@ -28,9 +36,11 @@ export default function Property() {
                         />
                     </div>
                     <div className='w-[100%] h-[100%]   flex flex-wrap justify-between overflow-auto overflow-y-scroll'>
-                        <Card />
-                        <Card />
-                        <Card />
+                        {
+                            data?.properties?.map((item,index)=>(
+                                <Card key={index} data={item}/>
+                            ))
+                        }
                     </div>
                 </div>
                 {/* <div className='w-[38%] h-[96%] '>

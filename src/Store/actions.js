@@ -8,7 +8,7 @@ import { baseURL } from "../Helper/Helper";
 
 export const startLogin = (data) => {
     return async dispatch => {
-        await axios.post(baseURL + 'auth/login/',data)
+        await axios.post(baseURL + 'auth/login/', data)
             .then((resp) => {
                 dispatch({
                     type: 'ACCESS',
@@ -32,6 +32,46 @@ export const getCat = () => {
             })
             .catch((err) => {
                 toast.error(err.response);
+            })
+    }
+}
+
+export const getCatInfo = (id, setData) => {
+    return async dispatch => {
+        await axios.get(baseURL + 'property/navigation/' + id)
+            .then((resp) => {
+                setData(resp.data)
+            })
+            .catch((err) => {
+                toast.error(err.response);
+            })
+    }
+}
+
+export const getCatProperty = (id, setData) => {
+    return async dispatch => {
+        await axios.get(baseURL + 'property/sub-category/' + id)
+            .then((resp) => {
+                setData(resp.data)
+            })
+            .catch((err) => {
+                toast.error(err.response);
+            })
+    }
+}
+
+export const getPropertyInfo = (id, setData, setLoading) => {
+    setLoading(true)
+    return async dispatch => {
+        await axios.get(baseURL + 'property/' + id)
+            .then((resp) => {
+                setData(resp.data)
+                setLoading(false)
+            })
+            .catch((err) => {
+                toast.error(err.response);
+                setLoading(false)
+
             })
     }
 }

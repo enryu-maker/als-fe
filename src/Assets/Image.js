@@ -7,4 +7,6 @@ export const IMAGE = {
     neighbor : require('../Assets/Neighborhoods.svg').default,
     sample : require('../Assets/sample.jpg'),
     stat1 : require('../Assets/stat1.png'),
+    sample1 : require('../Assets/trimbakeshwar.jpg'),
+
 }

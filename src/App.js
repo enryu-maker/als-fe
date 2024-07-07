@@ -25,8 +25,8 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/saved-property' element={<Saved />} />
-        <Route path='/home/:slug' element={<Info />} />
-        <Route path='/property/:slug' element={<Property />} />
+        <Route path='/property-info/:slug/:id' element={<Info />} />
+        <Route path='/property/:cat/:slug/:id' element={<Property />} />
       </Routes>
       <div className=' flex items-center justify-end z-50 p-10 fixed bottom-0 right-0'>
         <FloatingBtn />

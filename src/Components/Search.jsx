@@ -9,7 +9,7 @@ export default function Search() {
     ];
     const [selectedOption, setSelectedOption] = React.useState(null);
     return (
-        <div className='h-[50px] flex self-center  w-[98%] mt-5 font-Montserrat items-center space-x-5'>
+        <div className='h-[50px] flex  px-6 self-center  w-[98%] mt-5 font-Montserrat items-center space-x-5'>
             <div className='bg-white w-[450px] flex  h-[38px]'>
                 <input type="text" placeholder='Search...' className='w-[400px] rounded-l-[4px] bg-gray-100 h-full px-4' />
                 <button className='bg-primary w-[50px] h-full rounded-r-[4px] flex justify-center items-center'><IoSearch color='#fff' size={22} /></button>
