@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.06b69a28.css",
-    "main.js": "/static/js/main.84c11f1e.js",
+    "main.css": "/static/css/main.24589015.css",
+    "main.js": "/static/js/main.1c92fa36.js",
     "static/js/453.cbbda31b.chunk.js": "/static/js/453.cbbda31b.chunk.js",
+    "static/media/2nd.mp4": "/static/media/2nd.c22fd5220065365fb8f8.mp4",
     "static/media/sample.jpg": "/static/media/sample.f92e4a4255fac2541524.jpg",
     "static/media/stat1.png": "/static/media/stat1.9c9d26c4f8364bc347d5.png",
+    "static/media/trimbakeshwar.jpg": "/static/media/trimbakeshwar.b4ee948fb968ee23b893.jpg",
+    "static/media/Neighborhoods.svg": "/static/media/Neighborhoods.2929c92d78639f7f19618c4393276a31.svg",
+    "static/media/BuyAHome.svg": "/static/media/BuyAHome.7ab7089ecc1ea8c5b8d85a0c3a781794.svg",
+    "static/media/RentAHome.svg": "/static/media/RentAHome.6e9eb627d54437dd80ca0fdfeae6afa8.svg",
     "index.html": "/index.html",
     "static/media/BathIcon.svg": "/static/media/BathIcon.bfc76cfce9fb695ff1d0dbe8282d8848.svg",
     "static/media/BedIcon.svg": "/static/media/BedIcon.bd167b4d119da084d2ebda4a2804bde3.svg",
     "static/media/SquareFeetIcon.svg": "/static/media/SquareFeetIcon.0d5b27054661cba349b02b4bc6314449.svg",
-    "main.06b69a28.css.map": "/static/css/main.06b69a28.css.map",
-    "main.84c11f1e.js.map": "/static/js/main.84c11f1e.js.map",
+    "main.24589015.css.map": "/static/css/main.24589015.css.map",
+    "main.1c92fa36.js.map": "/static/js/main.1c92fa36.js.map",
     "453.cbbda31b.chunk.js.map": "/static/js/453.cbbda31b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.06b69a28.css",
-    "static/js/main.84c11f1e.js"
+    "static/css/main.24589015.css",
+    "static/js/main.1c92fa36.js"
   ]
 }
