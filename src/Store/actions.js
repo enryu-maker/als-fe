@@ -3,8 +3,6 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { baseURL } from "../Helper/Helper";
 
-// /auth/login/
-// /auth/profile
 
 export const startLogin = (data) => {
     return async dispatch => {
